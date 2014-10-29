@@ -1,0 +1,27 @@
+<h1>Listing geographies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>County</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @geographies.each do |geography| %>
+      <tr>
+        <td><%= geography.state %></td>
+        <td><%= geography.county %></td>
+        <td><%= link_to 'Show', geography %></td>
+        <td><%= link_to 'Edit', edit_geography_path(geography) %></td>
+        <td><%= link_to 'Destroy', geography, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Geography', new_geography_path %>

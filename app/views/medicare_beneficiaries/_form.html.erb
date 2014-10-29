@@ -1,0 +1,41 @@
+<%= form_for(@medicare_beneficiary) do |f| %>
+  <% if @medicare_beneficiary.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@medicare_beneficiary.errors.count, "error") %> prohibited this medicare_beneficiary from being saved:</h2>
+
+      <ul>
+      <% @medicare_beneficiary.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :geo_id %><br>
+    <%= f.number_field :geo_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ma_enrollment %><br>
+    <%= f.number_field :ma_enrollment %>
+  </div>
+  <div class="field">
+    <%= f.label :ffs_beneficiaries %><br>
+    <%= f.number_field :ffs_beneficiaries %>
+  </div>
+  <div class="field">
+    <%= f.label :eligibles %><br>
+    <%= f.number_field :eligibles %>
+  </div>
+  <div class="field">
+    <%= f.label :ma_penetration %><br>
+    <%= f.text_field :ma_penetration %>
+  </div>
+  <div class="field">
+    <%= f.label :beneficiaries_at %><br>
+    <%= f.date_select :beneficiaries_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

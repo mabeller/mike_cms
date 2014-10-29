@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Geo:</strong>
+  <%= @medicare_beneficiary.geo_id %>
+</p>
+
+<p>
+  <strong>Ma enrollment:</strong>
+  <%= @medicare_beneficiary.ma_enrollment %>
+</p>
+
+<p>
+  <strong>Ffs beneficiaries:</strong>
+  <%= @medicare_beneficiary.ffs_beneficiaries %>
+</p>
+
+<p>
+  <strong>Eligibles:</strong>
+  <%= @medicare_beneficiary.eligibles %>
+</p>
+
+<p>
+  <strong>Ma penetration:</strong>
+  <%= @medicare_beneficiary.ma_penetration %>
+</p>
+
+<p>
+  <strong>Beneficiaries at:</strong>
+  <%= @medicare_beneficiary.beneficiaries_at %>
+</p>
+
+<%= link_to 'Edit', edit_medicare_beneficiary_path(@medicare_beneficiary) %> |
+<%= link_to 'Back', medicare_beneficiaries_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Plan:</strong>
+  <%= @contract.plan_id %>
+</p>
+
+<p>
+  <strong>Hnumber:</strong>
+  <%= @contract.hnumber %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @contract.organization %>
+</p>
+
+<p>
+  <strong>Plan type:</strong>
+  <%= @contract.plan_type %>
+</p>
+
+<%= link_to 'Edit', edit_contract_path(@contract) %> |
+<%= link_to 'Back', contracts_path %>

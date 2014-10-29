@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  geo_id: 1
+  ma_enrollment: 1
+  ffs_beneficiaries: 1
+  eligibles: 1
+  ma_penetration: 1.5
+  beneficiaries_at: 2014-10-29
+
+two:
+  geo_id: 1
+  ma_enrollment: 1
+  ffs_beneficiaries: 1
+  eligibles: 1
+  ma_penetration: 1.5
+  beneficiaries_at: 2014-10-29

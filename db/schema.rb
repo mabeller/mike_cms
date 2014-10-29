@@ -11,7 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028033715) do
+ActiveRecord::Schema.define(version: 20141029040209) do
+
+  create_table "contracts", force: true do |t|
+    t.integer  "plan_id"
+    t.string   "hnumber"
+    t.string   "organization"
+    t.string   "plan_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "geographies", force: true do |t|
+    t.string   "state"
+    t.string   "county"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ma_enrollments", force: true do |t|
+    t.integer  "geo_ID"
+    t.string   "hnumber"
+    t.integer  "enrollment"
+    t.date     "enrollment_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "medicare_beneficiaries", force: true do |t|
+    t.integer  "geo_id"
+    t.integer  "ma_enrollment"
+    t.integer  "ffs_beneficiaries"
+    t.integer  "eligibles"
+    t.float    "ma_penetration"
+    t.date     "beneficiaries_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "plans", force: true do |t|
     t.string   "name"

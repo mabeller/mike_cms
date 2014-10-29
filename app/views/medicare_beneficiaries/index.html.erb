@@ -1,0 +1,35 @@
+<h1>Listing medicare_beneficiaries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Geo</th>
+      <th>Ma enrollment</th>
+      <th>Ffs beneficiaries</th>
+      <th>Eligibles</th>
+      <th>Ma penetration</th>
+      <th>Beneficiaries at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @medicare_beneficiaries.each do |medicare_beneficiary| %>
+      <tr>
+        <td><%= medicare_beneficiary.geo_id %></td>
+        <td><%= medicare_beneficiary.ma_enrollment %></td>
+        <td><%= medicare_beneficiary.ffs_beneficiaries %></td>
+        <td><%= medicare_beneficiary.eligibles %></td>
+        <td><%= medicare_beneficiary.ma_penetration %></td>
+        <td><%= medicare_beneficiary.beneficiaries_at %></td>
+        <td><%= link_to 'Show', medicare_beneficiary %></td>
+        <td><%= link_to 'Edit', edit_medicare_beneficiary_path(medicare_beneficiary) %></td>
+        <td><%= link_to 'Destroy', medicare_beneficiary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Medicare beneficiary', new_medicare_beneficiary_path %>

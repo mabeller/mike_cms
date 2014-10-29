@@ -1,0 +1,33 @@
+<%= form_for(@ma_enrollment) do |f| %>
+  <% if @ma_enrollment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ma_enrollment.errors.count, "error") %> prohibited this ma_enrollment from being saved:</h2>
+
+      <ul>
+      <% @ma_enrollment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :geoID %><br>
+    <%= f.number_field :geoID %>
+  </div>
+  <div class="field">
+    <%= f.label :hnumber %><br>
+    <%= f.text_field :hnumber %>
+  </div>
+  <div class="field">
+    <%= f.label :enrollment %><br>
+    <%= f.number_field :enrollment %>
+  </div>
+  <div class="field">
+    <%= f.label :enrollment_at %><br>
+    <%= f.date_select :enrollment_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
