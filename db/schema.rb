@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029040209) do
+ActiveRecord::Schema.define(version: 20141106040252) do
 
   create_table "contracts", force: true do |t|
     t.integer  "plan_id"
@@ -32,10 +32,12 @@ ActiveRecord::Schema.define(version: 20141029040209) do
   create_table "ma_enrollments", force: true do |t|
     t.integer  "geo_ID"
     t.string   "hnumber"
+    t.string   "org_name"
+    t.string   "org_type"
+    t.string   "plan_type"
     t.integer  "enrollment"
     t.date     "enrollment_at"
     t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "medicare_beneficiaries", force: true do |t|

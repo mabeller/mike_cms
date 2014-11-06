@@ -69,6 +69,6 @@ class MaEnrollmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ma_enrollment_params
-      params.require(:ma_enrollment).permit(:geoID, :hnumber, :enrollment, :enrollment_at)
+      params[:ma_enrollment]
     end
 end

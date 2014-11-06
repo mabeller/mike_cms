@@ -3,10 +3,6 @@
 <table>
   <thead>
     <tr>
-      <th>Geoid</th>
-      <th>Hnumber</th>
-      <th>Enrollment</th>
-      <th>Enrollment at</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,10 +10,6 @@
   <tbody>
     <% @ma_enrollments.each do |ma_enrollment| %>
       <tr>
-        <td><%= ma_enrollment.geoID %></td>
-        <td><%= ma_enrollment.hnumber %></td>
-        <td><%= ma_enrollment.enrollment %></td>
-        <td><%= ma_enrollment.enrollment_at %></td>
         <td><%= link_to 'Show', ma_enrollment %></td>
         <td><%= link_to 'Edit', edit_ma_enrollment_path(ma_enrollment) %></td>
         <td><%= link_to 'Destroy', ma_enrollment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
